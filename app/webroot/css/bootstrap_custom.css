@@ -1,0 +1,23 @@
+body {
+	padding-top: 70px;
+}
+
+.rangiRed {
+	/*color: #FF0000;*/
+	color: #0066CC;
+}
+
+.responsive-img-center {
+	margin:0 auto;
+	display: inline;
+}
+
+.home-toggle:after {
+	font-family: 'Glyphicons Halflings';
+	content: "\e253";
+}
+
+.home-toggle.collapsed:after {
+	font-family: 'Glyphicons Halflings';
+	content: "\e252";
+}

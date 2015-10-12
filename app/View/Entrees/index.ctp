@@ -1,0 +1,45 @@
+<?php
+$this->set("title_for_layout", "Entrees");
+?>
+
+<div class="row">
+	<div class="col-sm-12">
+		
+		<h3>
+			Entrees
+		</h3>
+		<br />
+		<?php
+			$i = 0;
+			foreach ($entrees as $entree):
+				if($i == 0){
+					echo "<div class=\"row\">";
+				}
+				echo "<div class=\"col-sm-2\">";
+					$this->App->showMiniWorkEntree($is_of_age, $entree);
+					echo "<br /><br />";
+				echo "</div>";
+				if($i == 5){
+					echo "</div>";
+					$i = 0;
+				} else {
+					$i = $i + 1;
+				}
+			endforeach;
+			if($i > 0){
+				echo "</div>";
+			}
+		?>
+		
+	</div>
+</div>
+
+<div class="row">
+	<div class="col-sm-12">
+		
+		<?php
+		echo $this->element('paginator');
+		?>
+		
+	</div>
+</div>
