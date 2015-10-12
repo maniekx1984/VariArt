@@ -30,10 +30,12 @@ The procedure seems to be complicated but don’t give up :) - it is easy, very 
 2. Create MySQL database (if you don’t have one) and import DB.sql file.
 3. Provide your database details in VA_app/app/Config/database.php
 4. Configure cron jobs:
+
 4.1. cron_DG.php file should run once everyday between 1 and 2 am
 4.2. cron_PT.php file should run once every Monday between 1 and 2 am
 5. Configure your domain to point to VA_app/app/webroot
 6. Chmod 777 folders:
+
 6.1. app/tmp
 6.2. app/webroot/img/avatars
 6.3. app/webroot/img/dg
