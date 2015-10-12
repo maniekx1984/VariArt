@@ -7,6 +7,7 @@ The internet gallery based on CakePHP and Bootstrap, both licensed under MIT lic
 VariArt.org is also licensed under MIT license - please read LICENSE.md file.
 
 VariArt.org is complete internet gallery as a web/social media portal with functionality like:
+
 1. file upload
 2. news
 3. comments
