@@ -36,12 +36,13 @@ The procedure seems to be complicated but don’t give up :) - it is easy, very 
 5. Configure your domain to point to VA_app/app/webroot
 6. Chmod 777 folders:
 
-6.1. app/tmp
-6.2. app/webroot/img/avatars
-6.3. app/webroot/img/dg
-6.4. app/webroot/img/news
-6.5. app/webroot/img/photos
-6.6. app/webroot/img/works
+1. app/tmp
+2. app/webroot/img/avatars
+3. app/webroot/img/dg
+4. app/webroot/img/news
+5. app/webroot/img/photos
+6. app/webroot/img/works
+
 7. Add some categories to va_categories table in MySQL database
 8. Change mail settings in app/Controller/UsersController.php - line: 269
 9. Make some changes in design, menu etc. - the sky is the limit
