@@ -30,20 +30,20 @@ The procedure seems to be complicated but don’t give up :) - it is easy, very 
 2. Create MySQL database (if you don’t have one) and import DB.sql file.
 3. Provide your database details in app/Config/database.php
 4. Configure cron jobs (as php files):
-4.1. cron_DG.php file should run once everyday between 1 and 2 am
-4.2. cron_PT.php file should run once every Monday between 1 and 2 am
-5. Configure your domain to point to app/webroot
-6. Chmod 777 folders:
-6.1. app/tmp
-6.2. app/webroot/img/avatars
-6.3. app/webroot/img/dg
-6.4. app/webroot/img/news
-6.5. app/webroot/img/photos
-6.6. app/webroot/img/works
-7. Add some categories to va_categories table in MySQL database
-8. Go to you website and register as user and in database change level of this user to ‘4’ (you will be the administrator)
-9. Change mail settings in app/Controller/UsersController.php - line: 269
-10. Make some changes in design, menu etc. - the sky is the limit
+4.1. cron_DG.php file should run once everyday between 1 and 2 am,
+4.2. cron_PT.php file should run once every Monday between 1 and 2 am.
+5. Configure your domain to point to app/webroot.
+6. Chmod 777 app/tmp folder.
+7. Create and chmod 777 folder:
+7.1. app/webroot/img/avatars
+7.2. app/webroot/img/dg
+7.3. app/webroot/img/news
+7.4. app/webroot/img/photos
+7.5. app/webroot/img/works
+8. Add some categories to va_categories table in MySQL database.
+9. Go to you website and register as user and in database change level of this user to ‘4’ (you will be the administrator).
+10. Change mail settings in app/Controller/UsersController.php - line: 269.
+11. Make some changes in design, menu etc. - the sky is the limit.
 
 
 Contributing
