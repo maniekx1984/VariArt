@@ -34,7 +34,7 @@ The procedure seems to be complicated but don’t give up :) - it is easy, very 
 4.2. cron_PT.php file should run once every Monday between 1 and 2 am.
 5. Configure your domain to point to app/webroot.
 6. Chmod 777 app/tmp folder.
-7. Create and chmod 777 folder:
+7. Create and chmod 777 folders:
 7.1. app/webroot/img/avatars
 7.2. app/webroot/img/dg
 7.3. app/webroot/img/news
