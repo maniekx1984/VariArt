@@ -137,7 +137,7 @@ class NewsCommentsController extends AppController {
 				$this->NewsComment->data['NewsComment']['is_active'] = "2";
 				
 				if($this->NewsComment->save($this->NewsComment->data)){
-					$this->User->query("INSERT INTO newva_register VALUES (NULL, '".$this->Auth->user('id')."', 'COMMENT REMOVAL (NEWS)', 'COMMENT ID: ".$id."', '".date('Y-m-d')."', '".date('H:i:s')."')");
+					$this->User->query("INSERT INTO va_register VALUES (NULL, '".$this->Auth->user('id')."', 'COMMENT REMOVAL (NEWS)', 'COMMENT ID: ".$id."', '".date('Y-m-d')."', '".date('H:i:s')."')");
 				}
 				
 			}

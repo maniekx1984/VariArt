@@ -13,8 +13,8 @@ $pageSubTitle = "VariArt";
 	</title>
 	
 	<?php
-		echo $this->Html->css($color_set.'/bootstrap.min');
-		echo $this->Html->css($color_set.'/bootstrap_custom');
+		echo $this->Html->css('bootstrap.min');
+		echo $this->Html->css('bootstrap_custom');
 		
 		echo $this->Html->meta(
 		    'keywords',
@@ -59,7 +59,7 @@ echo $this->element('headerLoginForm');
 	</div>
 </nav>
 
-<div class="container">
+<div class="container" style="background-color: #232220;">
 	<div class="row">
 		<div class="col-sm-12">
 			<?php echo $this->element('cookiesAcceptation'); ?>

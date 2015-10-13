@@ -77,7 +77,7 @@ class EntreesController extends AppController {
 				$this->Qimage->cronDGBIG($this->data['Entree']['user_id'], $this->data['Entree']['file_name']);
 				
 				if ($this->Entree->save($this->request->data)) {
-					$this->Entree->query("INSERT INTO newva_register VALUES (NULL, '".$this->Auth->user('id')."', 'DODANIE DG', 'WORK ID: ".$this->data['Entree']['work_id']."', '".date('Y-m-d')."', '".date('H:i:s')."')");
+					$this->Entree->query("INSERT INTO va_register VALUES (NULL, '".$this->Auth->user('id')."', 'ENTREE ADDITION', 'WORK ID: ".$this->data['Entree']['work_id']."', '".date('Y-m-d')."', '".date('H:i:s')."')");
                   	$this->Session->setFlash(__('The entree has been saved.'));
 					return $this->redirect(array('controller' => 'works', 'action' => 'view', $this->data['Entree']['work_id']));
 				} else {
@@ -85,9 +85,6 @@ class EntreesController extends AppController {
 				}
 			}
 		}
-		/*$works = $this->Entree->Work->find('list');
-		$moderators = $this->Entree->Moderator->find('list');
-		$this->set(compact('works', 'moderators'));*/
 	}
 
 
@@ -106,7 +103,7 @@ class EntreesController extends AppController {
 		}
 		$this->request->allowMethod('post', 'delete');
 		if ($this->Entree->delete()) {
-			$this->Entree->query("INSERT INTO newva_register VALUES (NULL, '".$this->Auth->user('id')."', 'ENTREE REMOVAL', 'ENTREE ID: ".$id."', '".date('Y-m-d')."', '".date('H:i:s')."')");
+			$this->Entree->query("INSERT INTO va_register VALUES (NULL, '".$this->Auth->user('id')."', 'ENTREE REMOVAL', 'ENTREE ID: ".$id."', '".date('Y-m-d')."', '".date('H:i:s')."')");
 			$this->Session->setFlash(__('The entree has been deleted.'));
 			return $this->redirect($this->referer());
 		} else {

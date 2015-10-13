@@ -148,7 +148,7 @@ class UsersController extends AppController {
 				if ($this->request->data['User']['password'] == $this->request->data['User']['confirm_password']) {
 					if ($this->User->save($this->request->data)) {
 						$this->Session->setFlash(__('<br /><br />'));
-						return $this->redirect(array('controller' => 'pages', 'action' => 'register_confirmation'));
+						return $this->redirect(array('controller' => 'pages', 'action' => 'registration_confirmation'));
 					} else {
 						$this->Session->setFlash(__('<div class="alert alert-danger" role="alert">Please verify provided information.</div>'));
 					}
@@ -200,7 +200,7 @@ class UsersController extends AppController {
 				if ($this->User->save($this->request->data)) {
 					
 					if ($this->Auth->user('level') > 2) {
-						$this->User->query("INSERT INTO newva_register VALUES (NULL, '".$this->Auth->user('id')."', 'USER EDIT', 'USER ID: ".$id."', '".date('Y-m-d')."', '".date('H:i:s')."')");
+						$this->User->query("INSERT INTO va_register VALUES (NULL, '".$this->Auth->user('id')."', 'USER EDIT', 'USER ID: ".$id."', '".date('Y-m-d')."', '".date('H:i:s')."')");
 					}
 					
 					$this->Session->setFlash(__('<div class="alert alert-success" role="alert">The profile has been saved.</div>'));

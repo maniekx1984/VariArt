@@ -166,7 +166,7 @@ class CommentsController extends AppController {
 				$this->Comment->data['Comment']['is_active'] = "2";
 				
 				if($this->Comment->save($this->Comment->data)){
-					$this->User->query("INSERT INTO newva_register VALUES (NULL, '".$this->Auth->user('id')."', 'COMMENT REMOVAL (USER)', 'COMMENT ID: ".$id."', '".date('Y-m-d')."', '".date('H:i:s')."')");
+					$this->User->query("INSERT INTO va_register VALUES (NULL, '".$this->Auth->user('id')."', 'COMMENT REMOVAL (USER)', 'COMMENT ID: ".$id."', '".date('Y-m-d')."', '".date('H:i:s')."')");
 				}
 				
 			}

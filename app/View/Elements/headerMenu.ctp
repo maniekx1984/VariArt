@@ -108,7 +108,7 @@
 			<li role="presentation"><?php
 			echo $this->Html->link(
 			    'termin and conditions',
-			    '/pages/terms_condition',
+			    '/pages/terms_conditions',
 			    array('role' => 'menuitem')
 			);
 			?></li>

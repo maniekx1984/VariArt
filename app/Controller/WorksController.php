@@ -326,7 +326,7 @@ class WorksController extends AppController {
 				if ($this->Work->delete()) {
 					//$this->Session->setFlash(__('The work has been deleted.'));
 					if($this->Auth->user('level') > 2){
-						$this->User->query("INSERT INTO newva_register VALUES (NULL, '".$this->Auth->user('id')."', 'WORK REMOVAL', 'WORK ID: ".$id."', '".date('Y-m-d')."', '".date('H:i:s')."')");
+						$this->User->query("INSERT INTO va_register VALUES (NULL, '".$this->Auth->user('id')."', 'WORK REMOVAL', 'WORK ID: ".$id."', '".date('Y-m-d')."', '".date('H:i:s')."')");
 						
 						$this->loadModel('Message');
 						$newMessage['Message']['m_to'] = $work['User']['id'];

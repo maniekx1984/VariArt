@@ -26,13 +26,13 @@ Installation
 ------------
 The procedure seems to be complicated but don’t give up :) - it is easy, very easy. It just look very seriously.
 
-1. Download and copy VA_app folder to your web server to your desired location.
+1. Download and copy all contents to your web server to your desired location.
 2. Create MySQL database (if you don’t have one) and import DB.sql file.
-3. Provide your database details in VA_app/app/Config/database.php
-4. Configure cron jobs:
+3. Provide your database details in app/Config/database.php
+4. Configure cron jobs (as php files):
 4.1. cron_DG.php file should run once everyday between 1 and 2 am
 4.2. cron_PT.php file should run once every Monday between 1 and 2 am
-5. Configure your domain to point to VA_app/app/webroot
+5. Configure your domain to point to app/webroot
 6. Chmod 777 folders:
 6.1. app/tmp
 6.2. app/webroot/img/avatars
@@ -41,8 +41,9 @@ The procedure seems to be complicated but don’t give up :) - it is easy, very 
 6.5. app/webroot/img/photos
 6.6. app/webroot/img/works
 7. Add some categories to va_categories table in MySQL database
-8. Change mail settings in app/Controller/UsersController.php - line: 269
-9. Make some changes in design, menu etc. - the sky is the limit
+8. Go to you website and register as user and in database change level of this user to ‘4’ (you will be the administrator)
+9. Change mail settings in app/Controller/UsersController.php - line: 269
+10. Make some changes in design, menu etc. - the sky is the limit
 
 
 Contributing

@@ -146,10 +146,10 @@ class NewsController extends AppController {
 		}
 		
 		if($action == 1){
-			$this->News->query("INSERT INTO newva_register VALUES (NULL, '".$this->Auth->user('id')."', 'NEWS ACCEPTATION', 'NEWS ID: ".$id."', '".date('Y-m-d')."', '".date('H:i:s')."')");
+			$this->News->query("INSERT INTO va_register VALUES (NULL, '".$this->Auth->user('id')."', 'NEWS ACCEPTATION', 'NEWS ID: ".$id."', '".date('Y-m-d')."', '".date('H:i:s')."')");
 			return $this->redirect(array('action' => 'moderatorIndexActivated'));
 		} elseif ($action == 2){
-			$this->News->query("INSERT INTO newva_register VALUES (NULL, '".$this->Auth->user('id')."', 'NEWS REMOVAL', 'NEWS ID: ".$id."', '".date('Y-m-d')."', '".date('H:i:s')."')");
+			$this->News->query("INSERT INTO va_register VALUES (NULL, '".$this->Auth->user('id')."', 'NEWS REMOVAL', 'NEWS ID: ".$id."', '".date('Y-m-d')."', '".date('H:i:s')."')");
 			return $this->redirect(array('action' => 'moderatorIndexNotActivated'));
 		}
 	}
@@ -188,7 +188,7 @@ class NewsController extends AppController {
 			if ($this->request->is(array('post', 'put'))) {
 				if ($this->News->save($this->request->data)) {
 					//$this->Session->setFlash(__('The news has been saved.'));
-					$this->News->query("INSERT INTO newva_register VALUES (NULL, '".$this->Auth->user('id')."', 'NEWS EDITION', 'NEWS ID: ".$id."', '".date('Y-m-d')."', '".date('H:i:s')."')");
+					$this->News->query("INSERT INTO va_register VALUES (NULL, '".$this->Auth->user('id')."', 'NEWS EDITION', 'NEWS ID: ".$id."', '".date('Y-m-d')."', '".date('H:i:s')."')");
 					return $this->redirect(array('action' => 'moderatorView', $id));
 				} else {
 					$this->Session->setFlash(__('<div class="alert alert-danger" role="alert">Please verify provided information.</div>'));

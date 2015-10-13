@@ -103,7 +103,7 @@
 			
 			// Verify file and path
 			if (!isset($data['file']) || !isset($data['path']) || !is_array($data['file'])){
-				$this->errors[] = 'Nie wybrano pliku.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 
@@ -113,7 +113,7 @@
 			}
 			
 			if (!$this->_verifyMimeForAvatar($data['file']['name'])){
-				$this->errors[] = 'Akceptowane formaty plików to: jpg lub gif.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 			
@@ -122,7 +122,7 @@
 			$original_height = $img[1];
 			
 			if (!($original_width == 50 AND $original_height == 50)){
-				$this->errors[] = 'Plik powinien mieć wymiary 50x50px.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 			
@@ -138,7 +138,7 @@
 			}
 			
 			if (!move_uploaded_file($data['file']['tmp_name'], $data['path'] . $name)){
-				$this->errors[] = 'Błąd podczas wgrywania pliku.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 			
@@ -154,7 +154,7 @@
 			
 			// Verify file and path
 			if (!isset($data['file']) || !isset($data['path']) || !is_array($data['file'])){
-				$this->errors[] = 'Nie wybrano pliku.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 
@@ -164,7 +164,7 @@
 			}
 			
 			if (!$this->_verifyMimeForPhoto($data['file']['name'])){
-				$this->errors[] = 'Akceptowane formaty plików to: jpg.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 			
@@ -172,7 +172,7 @@
 			$original_width = $img[0];
 			
 			if (!($original_width < 231)){
-				$this->errors[] = 'Plik nie może być szerszy niż 230px.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 			
@@ -188,7 +188,7 @@
 			}
 			
 			if (!move_uploaded_file($data['file']['tmp_name'], $data['path'] . $name)){
-				$this->errors[] = 'Błąd podczas wgrywania pliku.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 			
@@ -204,7 +204,7 @@
 			
 			// Verify file and path
 			if (!isset($data) || !isset($path) || !is_array($data)){
-				$this->errors[] = 'Nie wybrano pliku.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 
@@ -214,7 +214,7 @@
 			}
 			
 			if (!$this->_verifyMimeForPhoto($data['name'])){
-				$this->errors[] = 'Akceptowane formaty plików to: jpg.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 			
@@ -223,13 +223,13 @@
 			$original_height = $img[1];
 			
 			if (!($original_width < 601)){
-				$this->errors[] = 'Plik nie może być szerszy niż 600px.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 			
 			$file_size = $data['size'];
 			if(!($file_size < 2097152)) {
-				$this->errors[] = 'Plik nie może ważyć więcej niż 2MB.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 			
@@ -242,7 +242,7 @@
 			$complete_path = $path . DIRECTORY_SEPARATOR . $name;
 			
 			if (!move_uploaded_file($data['tmp_name'], $path . $name)){
-				$this->errors[] = 'Błąd podczas wgrywania pliku.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 
@@ -284,7 +284,7 @@
 			
 			// Verify file and path
 			if (!isset($data) || !isset($path) || !is_array($data)){
-				$this->errors[] = 'Nie wybrano pliku.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 
@@ -294,7 +294,7 @@
 			}
 			
 			if (!$this->_verifyMimeForPhoto($data['name'])){
-				$this->errors[] = 'Akceptowane formaty plików to: jpg.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 			
@@ -304,7 +304,7 @@
 			
 			$file_size = $data['size'];
 			if(!($file_size < 512000)) {
-				$this->errors[] = 'Plik nie może ważyć więcej niż 300KB.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 			
@@ -321,7 +321,7 @@
 			}
 			
 			if (!move_uploaded_file($data['tmp_name'], $complete_path)){
-				$this->errors[] = 'Błąd podczas wgrywania pliku.';
+				$this->errors[] = 'Error.';
 				return false;
 			}
 			

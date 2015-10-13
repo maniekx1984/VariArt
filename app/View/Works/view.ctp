@@ -129,7 +129,7 @@ $this->set("title_for_layout", "".$work['Work']['title']." - ".$work['User']['na
 		<script>
 			
 			$( "#btn-change-h" ).click(function() {
-				if ($( "#btn-change-h" ).text() == "wyświetl pracę w mniejszej wielkości"){
+				if ($( "#btn-change-h" ).text() == "view this work in smaller size"){
 					$( "#work" ).css( "max-height", "90vh" );
 					$( "#btn-change-h" ).text( "view this work in original size" );
 				} else {
