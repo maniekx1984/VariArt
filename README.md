@@ -40,6 +40,8 @@ The procedure seems to be complicated but don’t give up :) - it is easy, very 
 7.3. app/webroot/img/news
 7.4. app/webroot/img/photos
 7.5. app/webroot/img/works
+7.6. app/webroot/img/works/minis/mini
+7.7. app/webroot/img/works/minis/supermini
 8. Add some categories to va_categories table in MySQL database.
 9. Go to you website and register as user and in database change level of this user to ‘4’ (you will be the administrator).
 10. Change mail settings in app/Controller/UsersController.php - line: 269.
