@@ -28,7 +28,7 @@ $this->set("title_for_layout", "Work edit");
 				
 				echo "<strong>Current work view</strong><br />";
 				
-				echo $this->Html->tag('img', null, array('alt' => $work['Work']['title'], 'class' => 'img-responsive center-block', 'src' => 'http://variart.org/img/works/'.$work['User']['id'].'/'.$work['Work']['file_name'].''));
+				echo $this->Html->image("works/$user_id/".$work['Work']['file_name']."", array('alt' => $work['Work']['title'], 'class' => 'img-responsive center-block'));
 				
 				echo "<br /><br />";
 				echo $this->Form->input('file', array('type' => 'file', 'class' => false, 'label' => array('text' => 'Choose file if you want to change it')));
