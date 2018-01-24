@@ -24,7 +24,7 @@ Please note that VariArt.org uses only MySQL database.
 
 Installation
 ------------
-The procedure seems to be complicated but don’t give up :) - it is easy, very easy. It just look very seriously.
+The procedure seems to be complicated but don’t give up :) - it is easy, very easy.
 
 1. Download and copy all contents to your web server to your desired location.
 2. Create MySQL database (if you don’t have one) and import DB.sql file.
