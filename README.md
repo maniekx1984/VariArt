@@ -1,6 +1,8 @@
 VariArt.org
 ===========
 
+__This project is abandoned so please don't use it for new projects__
+
 [![VariArt.org](http://variart.org/img/logoVA_2.png)](http://variart.org)
 
 The internet gallery based on CakePHP and Bootstrap, both licensed under MIT license.
